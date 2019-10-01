@@ -122,26 +122,55 @@ height:50px;}
 <p>Complaint ID : {{dat['Complaint ID']}}</p>
 <p>Summarized : {{dat['summarized']}}</p>
 <p>Cleaned summarized : {{dat['cleaned_summarized']}}</p>
-<p>0 : {{dat['0']}}</p>
-<p>1 : {{dat['1']}}</p>
-<p>2 : {{dat['2']}}</p>
-<p>3 : {{dat['3']}}</p>
-<p>4 : {{dat['4']}}</p>
-<p>5 : {{dat['5']}}</p>
-<p>6 : {{dat['6']}}</p>
-<p>7 : {{dat['7']}}</p>
 
-<p>Topic #0: late,shocked,thought,sure,statements,happened,days,found,believe,dates,reviewed,payments,report,statement,monthly,payment,received,past,credit,reviewing</p>
-<p>Topic #1: interest,balance,card,payment,account,credit,nt,pay,told,money,paid,bank,called,said,month,payments,check,charged,transfer,time</p>
-<p>Topic #2: card,account,fraud,credit,charges,bank,number,called,told,fraudulent,nt,information,received,dispute,address,company,charge,letter,phone,sent</p>
-<p>Topic #3: credit,payment,account,late,card,fee,bank,balance,payments,closed,paid,fees,interest,limit,time,pay,score,nt,capital,chase</p>
-<p>Topic #4: pnc,unverified,verifying,suntrust,noncompliant,jp,keeps,morgan,removing,established,deleted,determined,bb,research,completed,evidence,confirm,responded,midland,santander</p>
-<p>Topic #5: card,points,american,express,bonus,credit,offer,amex,rewards,chase,account,told,miles,citi,received,fee,annual,called,nt,customer</p>
-<p>Topic #6: credit,report,account,reporting,debt,information,fargo,wells,capital,card,removed,inquiry,bank,bureaus,opened,reports,bankruptcy,accounts,collection,remove</p>
-<p>Topic #7: dispute,merchant,charge,chase,refund,transaction,item,credit,disputed,charges,card,charged,return,provided,hotel,purchase,company,merchandise,purchased,items</p>
 
 <p>most_likely : {{dat['most_likely']}}</p>
 <p>max_prob : {{dat['max_prob']}}</p>
+
+
+<table>
+<tbody>
+<tr>
+<td>most_likely : {{dat['most_likely']}}</td>
+<td>max_prob : {{dat['max_prob']}}</td>
+</tr>
+<tr style="background-color:{{lda_topic_colour[0]}};">
+<td>{{dat['0']}}</td>
+<td><p>Topic #0: late,shocked,thought,sure,statements,happened,days,found,believe,dates,reviewed,payments,report,statement,monthly,payment,received,past,credit,reviewing</p></td>
+</tr>
+<tr style="background-color:{{lda_topic_colour[1]}};">
+<td>{{dat['1']}}</td>
+<td><p>Topic #1: interest,balance,card,payment,account,credit,nt,pay,told,money,paid,bank,called,said,month,payments,check,charged,transfer,time</p></td>
+</tr>
+<tr style="background-color:{{lda_topic_colour[2]}};">
+<td>{{dat['2']}}</td>
+<td><p>Topic #2: card,account,fraud,credit,charges,bank,number,called,told,fraudulent,nt,information,received,dispute,address,company,charge,letter,phone,sent</p></td>
+</tr>
+<tr style="background-color:{{lda_topic_colour[3]}};">
+<td>{{dat['3']}}</td>
+<td><p>Topic #3: credit,payment,account,late,card,fee,bank,balance,payments,closed,paid,fees,interest,limit,time,pay,score,nt,capital,chase</p></td>
+</tr>
+<tr style="background-color:{{lda_topic_colour[4]}};">
+<td>{{dat['4']}}</td>
+<td><p>Topic #4: pnc,unverified,verifying,suntrust,noncompliant,jp,keeps,morgan,removing,established,deleted,determined,bb,research,completed,evidence,confirm,responded,midland,santander</p></td>
+</tr>
+<tr style="background-color:{{lda_topic_colour[5]}};">
+<td>{{dat['5']}}</td>
+<td><p>Topic #5: card,points,american,express,bonus,credit,offer,amex,rewards,chase,account,told,miles,citi,received,fee,annual,called,nt,customer</p></td>
+</tr>
+
+<tr style="background-color:{{lda_topic_colour[6]}};">
+<td>{{dat['6']}}</td>
+<td><p>Topic #6: credit,report,account,reporting,debt,information,fargo,wells,capital,card,removed,inquiry,bank,bureaus,opened,reports,bankruptcy,accounts,collection,remove</p></td>
+</tr>
+
+<tr style="background-color:{{lda_topic_colour[7]}};">
+<td>{{dat['7']}}</td>
+<td><p>Topic #7: dispute,merchant,charge,chase,refund,transaction,item,credit,disputed,charges,card,charged,return,provided,hotel,purchase,company,merchandise,purchased,items</p></tr>
+</tbody>
+</table>
+
+
 
 </body>
 </html>

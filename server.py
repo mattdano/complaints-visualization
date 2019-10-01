@@ -22,7 +22,11 @@ def homepage():
 @app.route('/case/<id>')
 def profile(id):
     dat = compliants.loc[int(id)].to_dict()
-    return flask.render_template('case.html', dat=dat)
+    lda_topic_colour=dict()
+    for i in range(0,8):
+        lda_topic_colour[i]=None
+    lda_topic_colour[dat['most_likely']]='red'
+    return flask.render_template('case.html', dat=dat,lda_topic_colour=lda_topic_colour)
 
 
 if __name__ == "__main__":
