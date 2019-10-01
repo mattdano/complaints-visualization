@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Case | {{dat['Complaint ID']}}</title>
+    <style>
+
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+       url({{ url_for('static', filename='source-sans-pro-v11-latin-regular.woff2') }}) format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url({{ url_for('static', filename='source-sans-pro-v11-latin-regular.woff')}}) format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body{  font-family: 'Source Sans Pro';}
+
+    .left{margin-left:5%;}
+
+  #myInput {
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 0px 12px 0px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #FFFFFF;
+    color:#7B7B7B;
+    font-size:10pt;
+}
+
+ #myTable tr:hover{
+     background-color: #EEEEEE;
+ }
+
+        #mynetwork {
+            width: 100%;
+            height: 500px;
+            background-color: #fff;
+        }
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+
+.banner{
+  background-color:#9942B9;
+  height:80px;
+  width:100%;
+  left:0px;
+  background-image:url({{ url_for('static', filename='logo.svg')}});
+  background-repeat: no-repeat;
+  background-position:10% 0px;
+  padding: 0; margin: 0;}
+
+  #banner {
+    position: relative;
+}
+
+#banner img{
+    position: absolute;
+    top: 10px;
+    left: 10%;
+height:50px;}
+
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+
+</style>
+
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+
+  <body>
+
+<div id="banner" style="padding-bottom:100px;">    <img src="{{ url_for('static', filename='logo.svg')}}" class="ribbon"/></div>
+
+
+
+<p>Product : {{dat['Product']}}</p>
+<p>Issue : {{dat['Issue']}}</p>
+<p>Consumer complaint narrative : {{dat['Consumer complaint narrative']}}</p>
+<p>Complaint ID : {{dat['Complaint ID']}}</p>
+<p>Summarized : {{dat['summarized']}}</p>
+<p>Cleaned summarized : {{dat['cleaned_summarized']}}</p>
+<p>0 : {{dat['0']}}</p>
+<p>1 : {{dat['1']}}</p>
+<p>2 : {{dat['2']}}</p>
+<p>3 : {{dat['3']}}</p>
+<p>4 : {{dat['4']}}</p>
+<p>5 : {{dat['5']}}</p>
+<p>6 : {{dat['6']}}</p>
+<p>7 : {{dat['7']}}</p>
+
+<p>Topic #0: late,shocked,thought,sure,statements,happened,days,found,believe,dates,reviewed,payments,report,statement,monthly,payment,received,past,credit,reviewing</p>
+<p>Topic #1: interest,balance,card,payment,account,credit,nt,pay,told,money,paid,bank,called,said,month,payments,check,charged,transfer,time</p>
+<p>Topic #2: card,account,fraud,credit,charges,bank,number,called,told,fraudulent,nt,information,received,dispute,address,company,charge,letter,phone,sent</p>
+<p>Topic #3: credit,payment,account,late,card,fee,bank,balance,payments,closed,paid,fees,interest,limit,time,pay,score,nt,capital,chase</p>
+<p>Topic #4: pnc,unverified,verifying,suntrust,noncompliant,jp,keeps,morgan,removing,established,deleted,determined,bb,research,completed,evidence,confirm,responded,midland,santander</p>
+<p>Topic #5: card,points,american,express,bonus,credit,offer,amex,rewards,chase,account,told,miles,citi,received,fee,annual,called,nt,customer</p>
+<p>Topic #6: credit,report,account,reporting,debt,information,fargo,wells,capital,card,removed,inquiry,bank,bureaus,opened,reports,bankruptcy,accounts,collection,remove</p>
+<p>Topic #7: dispute,merchant,charge,chase,refund,transaction,item,credit,disputed,charges,card,charged,return,provided,hotel,purchase,company,merchandise,purchased,items</p>
+
+<p>most_likely : {{dat['most_likely']}}</p>
+<p>max_prob : {{dat['max_prob']}}</p>
+
+</body>
+</html>
