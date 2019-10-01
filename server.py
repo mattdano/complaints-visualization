@@ -1,7 +1,5 @@
-import pickle
-import random
-from flask import request, session
-import datetime
+# run with
+#FLASK_APP=server.py FLASK_DEBUG=1 python -m flask run
 
 from flask import Flask, redirect, url_for
 import flask
